@@ -8,6 +8,10 @@
 --border-portfolio-color:#E7E9FC;
 --box-shadow-hero-bt-color:0px 4px 4px rgba(0, 0, 0, 0.15);
 --box-shadow-comando-card-color: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+--color-icons:#8e8f99;
+--color-icons-activ-footer:#31D0AA;
+--box-shadow-portfolio-button:0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+--color-hero-gradient:rgba(46, 47, 66, 0.7);
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -82,17 +86,21 @@ img {
     padding-bottom: 24px;
     display: block;
 }
-/* .active {
-    position:relative;
-    background: #404BBF; 
+.active {
+    position: relative;
+    color: var(--active-color);
+   
 }
-.active:active:after {
+.active::after {
     position: absolute;
     display: block;
-    width: 48px;
+    width: 100%;
     height: 4px;
     border-radius: 2px;
-} */
+    left: 0;
+    background-color: var(--active-color); 
+    content: "";
+}
 .link-header-menu {
     gap: 40px;
 }
@@ -130,6 +138,7 @@ img {
     padding-bottom: 188px;
     background-position: 50% 50%;
     margin: auto;
+    position: relative;
 }
 .hero-title {
     font-size: 56px;
@@ -270,7 +279,7 @@ img {
     gap: 24px;
     width: 168px;
     border-radius: 4px;
-    border: 1px solid #8E8F99;
+    border: 1px solid var(--color-icons);
     margin-bottom: 120px;
     width: 168px;
     transition-duration: 250ms;
@@ -286,7 +295,7 @@ img {
     width: 104px;
     height: 56px;
     margin: 16px 32px;
-    fill:#8e8f99
+    fill:var(--color-icons);
 }
 .icons-customers:hover,
 .icons-customers:focus {
@@ -343,7 +352,7 @@ img {
 }
 .icons-footer-list:hover,
 .icons-footer-list:focus {
-    background-color: #31D0AA;  
+    background-color: var(--color-icons-activ-footer);  
 }
 .container-footer-social {
    display: flex;
@@ -396,7 +405,7 @@ img {
     background: var(--active-color);
     color: var(--fon-text-color);
     border: 1px solid transparent;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--box-shadow-portfolio-button);
 
   }
 .portfolio-project {
@@ -480,4 +489,44 @@ img {
     padding-right: 15px;
     padding-left: 15px;   
 }
+ 
+ .backdrop {
+    position: fixed;
+    min-width: 408px;
+    height:100%;
     
+ }
+ .is-hidden {
+    visibility:hidden;
+    opacity:unset;
+    pointer-events: painted;
+ } 
+ .modal {
+    position: sticky;
+    border-radius: 4px;
+background: #FCFCFC;
+box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+ 
+ } 
+ .icons-modal {
+    align-items: center;
+    width: 8px;
+    height: 8px;
+    fill:var(--secondary-color)
+ }
+ .icons-modal:hover,
+ .icons-modal:focus {
+   fill: var(--fon-text-color);
+   
+ }
+ .icons-modal-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background:var(--border-portfolio-color);
+ }
+ .icons-modal-btn:hover,
+ .icons-modal-btn:focus {
+    background: var(--active-color);
+ }
