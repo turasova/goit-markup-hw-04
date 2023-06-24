@@ -522,14 +522,12 @@ img {
 }
  
  .backdrop {
-    display: flex;
     position: fixed;
     width: 100%;
     height:100%;
-    top: 80px;  
-    left:516px; 
-    right: 516px;
-    bottom: 13px;
+    top: 0;  
+    left: 0; 
+    background-color:rgba(0, 0, 0, 0.12);
  }
  .is-hidden {
     visibility:hidden;
@@ -538,8 +536,11 @@ img {
  } 
  .modal {
     width: 408px;
-    height: 584px;
+    min-height: 584px;
     position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
     border-radius: 4px;
     background: var(--modal-fon);
     box-shadow:var(--box-shadow-modal);
