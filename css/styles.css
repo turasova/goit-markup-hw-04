@@ -278,11 +278,13 @@ img {
    background-color: var(--logo-color);
    display: flex;
    align-items: center; 
-   justify-content: center;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
    transition-property: background-color;
    margin-top: 8px;
+}
+.icons-comando-item {
+    justify-content: center;
 }
 .icons-comando-list:hover,
 .icons-comando-list:focus {
@@ -301,19 +303,20 @@ img {
     align-items: center; 
     justify-content: center; 
     color:var(--color-icons);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-    transition-property: border, fill;
+    
 }
 .customers-list {
     width: 168px;
     height: 88px;
     display: blok;
     gap: 24px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+    transition-property: border, fill;
     
 }
-.customers-link:hover,
-.customers-link:focus  {
+.customers-list:hover,
+.customers-list:focus  {
     border: 1px solid var(--active-color);
     fill: var(--active-color);
 } 
@@ -350,10 +353,9 @@ img {
 .footer {
     display: flex;
     align-items: baseline;
-    gap: 120px;
      }
 .footer-logo-text {
-    margin-right: 0;
+    margin-right: 120px;
      }
 .footer-section .logo {
   margin-bottom: 16px; 
@@ -376,7 +378,6 @@ img {
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
    transition-property: background-color;
-   gap:16px;
 }
 .icons-footer-list:hover,
 .icons-footer-list:focus {
@@ -397,6 +398,9 @@ img {
    color: var(--fon-text-color);
    text-align: center;
    margin-bottom: 16px;
+}
+.icons-footer-item {
+    gap: 16px; 
 }
 .portfolio {
     padding-top: 96px;
@@ -425,9 +429,16 @@ img {
     padding-bottom: 12px;
     padding-left: 24px;
     align-items: center;
+      }
+  .portfolio-list {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4,0,0.2,1); 
     transition-property: color, background-color, border ;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .portfolio-list:hover,
+  .portfolio-list:focus {
+    box-shadow: var(--box-shadow-portfolio-button);
   }
 .portfolio-button:hover,
 .portfolio-button:focus {
@@ -447,7 +458,7 @@ img {
     position: relative;  
     overflow: hidden;
 }
-.overlay {
+.overlay{
     background-color: var(--logo-color);
     color: var(--text-footer-color);
     font-family: sans-serif;
