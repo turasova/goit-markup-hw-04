@@ -242,10 +242,7 @@ img {
     padding-bottom: 120px;
 }
 .comando-container {
-    padding-top: 32px;
-    padding-bottom: 32px; 
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 32px 0;
  }
 .comando-fon-secondary {
    background-color: var(--fon-text-color);
@@ -277,6 +274,7 @@ img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    justify-content: center;
    background-color: var(--logo-color);
    display: flex;
    align-items: center; 
@@ -305,7 +303,13 @@ img {
     align-items: center; 
     justify-content: center; 
     color:var(--color-icons);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
+}
+.customers-link:hover,
+.customers-link:focus {
+    border-color: var(--active-color);
+
 }
 .customers-list {
     width: 168px;
@@ -437,6 +441,10 @@ img {
     transition-timing-function: cubic-bezier(0.4,0,0.2,1); 
     transition-property: color, background-color, border ;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .portfolio-list:hover,
   .portfolio-list:focus {
@@ -450,11 +458,16 @@ img {
     box-shadow: var(--box-shadow-portfolio-button);
 
   }
+.portfolio-item:hover,
+.portfolio-item:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transform: translateY(0%);
+  }
 .portfolio-project {
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
-   
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .portfolio-link {
     position: relative;  
@@ -471,7 +484,7 @@ img {
     font-family: Roboto;
     line-height: 1.5;
     letter-spacing: 0.32px;
-    padding: 40px 32px 164px 32px;
+    padding: 40px 32px;
     position: absolute;
     top: 0;
     left: 0;
@@ -480,6 +493,7 @@ img {
     transform: translateY(100%); 
     transition: transform 250ms ease-in-out; 
     transition-property: transform;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .portfolio-link:hover .overlay {
@@ -567,6 +581,7 @@ img {
     height: 8px;
     fill:var(--secondary-color)
  }
+
  .icons-modal:hover,
  .icons-modal:focus {
    fill: var(--fon-text-color);
@@ -588,6 +603,7 @@ img {
     padding: 0;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  .modal-btn:hover,
  .modal-btn:focus {
