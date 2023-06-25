@@ -577,8 +577,6 @@ img {
  } 
  .icons-modal {
     align-items: center;
-    width: 8px;
-    height: 8px;
     fill:var(--secondary-color)
  }
 
@@ -608,6 +606,5 @@ img {
  .modal-btn:hover,
  .modal-btn:focus {
     background-color: var(--active-color);
-    border: none; 
-
+    border: none;
  }
