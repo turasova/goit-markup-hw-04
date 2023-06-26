@@ -607,4 +607,5 @@ img {
  .modal-btn:focus {
     background-color: var(--active-color);
     border: none;
+    fill: #FFFFFF; 
  }
