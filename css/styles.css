@@ -281,10 +281,11 @@ img {
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
    transition-property: background-color;
-   margin-top: 8px;
+   
 }
 .icons-comando-item {
     justify-content: center;
+    margin-top: 8px;
 }
 .icons-comando-link:hover,
 .icons-comando-link:focus {
@@ -494,9 +495,9 @@ img {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .portfolio-link:hover .overlay,
-  .portfolio-link:focus .overlay {
-    transform:  translateY(0); 
+  .portfolio-item:hover .overlay,
+  .portfolio-item:focus .overlay {
+    transform:  translateY(0%); 
   }
 .portfolio-project-menu {
     row-gap: 48px;   
@@ -583,7 +584,7 @@ img {
 
  .icons-modal:hover,
  .icons-modal:focus {
-    fill: #ffffff; 
+    fill: #FFFFFF; 
  }
  
  .modal-btn {
