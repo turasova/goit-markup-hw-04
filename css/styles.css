@@ -435,14 +435,10 @@ img {
     padding-bottom: 12px;
     padding-left: 24px;
     align-items: center;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
       }
   .portfolio-list {
    transition-property: color, background-color, border ;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
     transform: translateY(0%);
   }
   .portfolio-list:hover,
@@ -587,7 +583,7 @@ img {
 
  .icons-modal:hover,
  .icons-modal:focus {
-   fill: #ffffff; 
+    fill: #ffffff; 
  }
  
  .modal-btn {
@@ -604,7 +600,6 @@ img {
     border: 1px solid var(--border-modal-btn);
     padding: 0;
     cursor: pointer;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  .modal-btn:hover,
