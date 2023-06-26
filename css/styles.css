@@ -303,8 +303,7 @@ img {
     align-items: center; 
     justify-content: center; 
     color:var(--color-icons);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);    
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -417,6 +416,7 @@ img {
 .portfolio-menu {
     justify-content: center;
     margin-bottom: 72px; 
+    
     }
 .portfolio-button {
     font-family: 'Roboto', sans-serif;
@@ -444,7 +444,8 @@ img {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4,0,0.2,1); 
     transition-property: color, background-color, border ;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    transform: translateY(0%);
   }
   .portfolio-list:hover,
   .portfolio-list:focus {
@@ -577,17 +578,16 @@ img {
     background: var(--modal-fon);
     box-shadow:var(--box-shadow-modal);
     padding-right: 0;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
  } 
  .icons-modal {
     align-items: center;
-    fill:var(--secondary-color)
+    fill:var(--secondary-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .icons-modal:hover,
  .icons-modal:focus {
-   fill: var(--fon-text-color);
-   
+   fill: var(--fon-text-color); 
  }
  
  .modal-btn {
@@ -604,8 +604,8 @@ img {
     border: 1px solid var(--border-modal-btn);
     padding: 0;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  .modal-btn:hover,
  .modal-btn:focus {
